@@ -1,0 +1,92 @@
+@import '~@angular/material/theming';
+@import "../styles/variables";
+.optim-header {
+  justify-content: space-between;
+  padding-right: 0;
+  color: white;
+
+  &__mail {
+    color: white;
+  }
+  &__phone {
+    height: 100%;
+    min-width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__mail-link {
+    padding: 0 10px;
+  }
+  &__phone-number-link,
+  &__phone-link {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background: white;
+    button {
+      line-height: normal;
+      border-radius: 0;
+      border: none;
+    }
+  }
+  &__phone-number-link {
+    width: 100%;
+    background-color: unset;
+    button {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.optim-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0;
+  background-color: white;
+  height: auto;
+  color: mat-color($primary) !important;
+  img {
+    max-height: 100px;
+  }
+}
+
+.optim-footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  height: auto;
+
+  &__location {
+    height: 250px;
+
+    img {
+      height: 100%;
+      border-radius: 10px;
+      border: 1px solid grey;
+    }
+  }
+  &__social-media {
+
+  }
+  &__social-media-item {
+    a {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: stretch;
+      align-items: center;
+      padding: 0 0.75em;
+      grid-template-columns: 25% 75%;
+      flex-direction: column;
+      grid-column-gap: 5px;
+      color: white;
+    }
+  }
+}
