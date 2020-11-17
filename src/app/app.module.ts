@@ -14,12 +14,21 @@ import {
   faMailBulk,
   faPhoneSquareAlt,
   faMapMarkedAlt,
+  faAward,
+  faUserTie,
+  faReceipt,
+  faFileInvoice,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faEnvelope,
 } from '@fortawesome/free-regular-svg-icons';
 import { MainComponent } from './main/main.component';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { CategoryComponent } from './category/category.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { MatCardModule } from '@angular/material/card';
 
 const icons: IconDefinition[] = [
   faPhoneAlt,
@@ -28,17 +37,26 @@ const icons: IconDefinition[] = [
   faPhoneSquareAlt,
   faMapMarkedAlt,
   faFacebookSquare,
+  faAward,
+  faUserTie,
+  faReceipt,
+  faFileInvoice,
 ];
 const materialModules = [
   MatToolbarModule,
   MatIconModule,
-  MatButtonModule
+  MatButtonModule,
+  MatCardModule,
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    CategoryComponent,
+    AboutComponent,
+    ContactComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

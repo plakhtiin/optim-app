@@ -1,6 +1,6 @@
 <!--Header-->
 <mat-toolbar color="primary" class="optim-header">
-  <a href="mailto:someone@example.com" class="optim-header__mail">
+  <a href="mailto:info@optim-fs.co.il" class="optim-header__mail">
     <fa-icon [icon]="['far', 'envelope']" size="lg"></fa-icon>
     <span class="optim-header__mail-link">info@optim-fs.co.il</span>
   </a>
@@ -18,12 +18,29 @@
   </a>
 </mat-toolbar>
 <mat-toolbar color="basic" class="optim-menu">
-  <div>
+  <div class="optim-menu__logo" routerLink="/">
     <img src="assets/logo.svg" alt="Optim">
-    <span>Optim</span>
+    <span class="optim-menu__logo-text">Optim</span>
+  </div>
+  <div class="optim-menu__list">
+      <span class="optim-menu__item" routerLink="about">
+        О нас
+      </span>
+      <span class="optim-menu__item" routerLink="/">
+        Услуги
+      </span>
+      <span class="optim-menu__item" routerLink="contact">
+        Контакты
+      </span>
   </div>
 </mat-toolbar>
+
 <!--Content area-->
+<div class="optim-content">
+  <div class="optim-content__header">
+    <h1>Пенсии, страхование, бухгалтерия, инвестиции, кредитование, налоги, юридические консультации</h1>
+  </div>
+</div>
 <router-outlet></router-outlet>
 
 <!--Footer-->
@@ -34,15 +51,15 @@
     </a>
   </div>
   <div class="optim-footer__schedule">
-    <p>График работы:</p>
-    <p>Пн 9:00-20:00</p>
-    <p>Вт-Пт 9:00-17:00</p>
-    <p>Сб - Выходной</p>
-    <p>Вс 9:00-17:00</p>
+    <dt>График работы:</dt>
+    <dt>Пн 9:00-20:00</dt>
+    <dt>Вт-Пт 9:00-17:00</dt>
+    <dt>Сб - Выходной</dt>
+    <dt>Вс 9:00-17:00</dt>
   </div>
   <div class="optim-footer__social-media">
     <div class="optim-footer__social-media-item">
-      <a href="mailto:someone@example.com">
+      <a href="mailto:info@optim-fs.co.il">
         <fa-icon [icon]="['fas', 'mail-bulk']" size="2x"></fa-icon>
         <span>info@optim-fs.co.il</span>
       </a>

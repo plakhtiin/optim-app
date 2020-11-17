@@ -1,0 +1,65 @@
+@import '~@angular/material/theming';
+@import "../../styles/variables";
+
+.optim-about {
+  padding: 40px;
+  min-width: 500px;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+
+  &__headline {
+    color: mat-color($primary);
+  }
+
+  &__subheading-1,
+  &__subheading-2 {
+    color: mat-color($primary);
+    margin: 10px 0 5px 0;
+  }
+
+  &__icon {
+    color: mat-color($primary);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  &__content-block {
+    background: white;
+    padding: 15px;
+    width: 50%;
+    min-width: 500px;
+    text-align: justify;
+
+    &:nth-child(2n) {
+      justify-self: end;
+    }
+  }
+  &__company-motto {
+    margin: 40px auto;
+    .mat-card-content {
+      font-size: x-large;
+      text-align: center;
+      line-height: normal;
+      padding-top: 0;
+    }
+  }
+  &__warn {
+    color: mat-color($warn);
+  }
+}
+.mat-card-header {
+  align-items: center;
+
+  .mat-card-title {
+    margin: 0;
+    color: mat-color($primary);
+
+  }
+}
+.mat-card-content {
+  padding-top: 10px;
+}
