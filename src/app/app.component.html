@@ -18,11 +18,12 @@
   </a>
 </mat-toolbar>
 <mat-toolbar color="basic" class="optim-menu">
-  <div class="optim-menu__logo" routerLink="/">
-    <img src="assets/logo.svg" alt="Optim">
-    <span class="optim-menu__logo-text">Optim</span>
-  </div>
-  <div class="optim-menu__list">
+  <div  class="optim-menu__info">
+    <div class="optim-menu__logo" routerLink="/">
+      <img src="assets/logo.svg" alt="Optim">
+      <span class="optim-menu__logo-text">Optim</span>
+    </div>
+    <div class="optim-menu__list">
       <span class="optim-menu__item" routerLink="about">
         О нас
       </span>
@@ -32,6 +33,7 @@
       <span class="optim-menu__item" routerLink="contact">
         Контакты
       </span>
+    </div>
   </div>
 </mat-toolbar>
 
@@ -45,42 +47,45 @@
 
 <!--Footer-->
 <mat-toolbar color="primary" class="optim-footer">
-  <div class="optim-footer__location">
-    <a href="https://www.google.com/maps/place/Netanya,+Israel" target="_blank">
-      <img src="assets/location.png" alt="Нетания, Израиль">
-    </a>
-  </div>
-  <div class="optim-footer__schedule">
-    <dt>График работы:</dt>
-    <dt>Пн 9:00-20:00</dt>
-    <dt>Вт-Пт 9:00-17:00</dt>
-    <dt>Сб - Выходной</dt>
-    <dt>Вс 9:00-17:00</dt>
-  </div>
-  <div class="optim-footer__social-media">
-    <div class="optim-footer__social-media-item">
-      <a href="mailto:info@optim-fs.co.il">
-        <fa-icon [icon]="['fas', 'mail-bulk']" size="2x"></fa-icon>
-        <span>info@optim-fs.co.il</span>
-      </a>
-    </div>
-    <div class="optim-footer__social-media-item">
-      <a href="tel:+972 77-527-9557">
-        <fa-icon [icon]="['fas', 'phone-square-alt']" size="2x"></fa-icon>
-        <span>+972 77-527-9557</span>
-      </a>
-    </div>
-    <div class="optim-footer__social-media-item">
+  <div class="optim-footer__abstract-figure"></div>
+  <div class="optim-footer__main-info">
+    <div class="optim-footer__location">
       <a href="https://www.google.com/maps/place/Netanya,+Israel" target="_blank">
-        <fa-icon [icon]="['fas', 'map-marked-alt']" size="2x"></fa-icon>
-        <span>Нетания, Израиль</span>
+        <img src="assets/location.png" alt="Нетания, Израиль">
       </a>
     </div>
-    <div class="optim-footer__social-media-item">
-      <a href="https://www.facebook.com/IFamily.Office" target="_blank">
-        <fa-icon [icon]="['fab', 'facebook-square']" size="2x"></fa-icon>
-        <span>Свяжитесь с нами!</span>
-      </a>
+    <div class="optim-footer__schedule">
+      <dt>График работы:</dt>
+      <dt>Пн 9:00-20:00</dt>
+      <dt>Вт-Пт 9:00-17:00</dt>
+      <dt>Сб - Выходной</dt>
+      <dt>Вс 9:00-17:00</dt>
+    </div>
+    <div class="optim-footer__social-media">
+      <div class="optim-footer__social-media-item">
+        <a href="mailto:info@optim-fs.co.il">
+          <fa-icon [icon]="['fas', 'mail-bulk']" size="2x"></fa-icon>
+          <span>info@optim-fs.co.il</span>
+        </a>
+      </div>
+      <div class="optim-footer__social-media-item">
+        <a href="tel:+972 77-527-9557">
+          <fa-icon [icon]="['fas', 'phone-square-alt']" size="2x"></fa-icon>
+          <span>+972 77-527-9557</span>
+        </a>
+      </div>
+      <div class="optim-footer__social-media-item">
+        <a href="https://www.google.com/maps/place/Netanya,+Israel" target="_blank">
+          <fa-icon [icon]="['fas', 'map-marked-alt']" size="2x"></fa-icon>
+          <span>Нетания, Израиль</span>
+        </a>
+      </div>
+      <div class="optim-footer__social-media-item">
+        <a href="https://www.facebook.com/IFamily.Office" target="_blank">
+          <fa-icon [icon]="['fab', 'facebook-square']" size="2x"></fa-icon>
+          <span>Свяжитесь с нами!</span>
+        </a>
+      </div>
     </div>
   </div>
 </mat-toolbar>

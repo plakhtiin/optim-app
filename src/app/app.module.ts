@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatRadioModule } from '@angular/material/radio';
 import {
   IconDefinition,
   faPhoneAlt,
@@ -18,6 +19,8 @@ import {
   faUserTie,
   faReceipt,
   faFileInvoice,
+  faEnvelopeOpenText,
+  faFileAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faEnvelope,
@@ -29,6 +32,10 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MatCardModule } from '@angular/material/card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { CommonModule } from '@angular/common';
 
 const icons: IconDefinition[] = [
   faPhoneAlt,
@@ -41,12 +48,17 @@ const icons: IconDefinition[] = [
   faUserTie,
   faReceipt,
   faFileInvoice,
+  faEnvelopeOpenText,
+  faFileAlt,
 ];
 const materialModules = [
   MatToolbarModule,
   MatIconModule,
   MatButtonModule,
   MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatRadioModule,
 ];
 
 @NgModule({
@@ -59,10 +71,13 @@ const materialModules = [
     NotFoundComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     ...materialModules,
   ],
   providers: [],
