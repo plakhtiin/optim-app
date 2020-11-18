@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { IconName } from '@fortawesome/fontawesome-svg-core';
 
 import { CATEGORIES } from './categories';
 
@@ -11,7 +11,7 @@ import { CATEGORIES } from './categories';
 })
 export class CategoryComponent implements OnInit {
   categoryTitle = '';
-  categoryIcon: IconProp = 'dot-circle';
+  categoryIcon: IconName = 'dot-circle';
   subcategories: string[] = [];
 
   constructor(

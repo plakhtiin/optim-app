@@ -1,9 +1,9 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { IconName } from '@fortawesome/fontawesome-svg-core';
 
 export interface Category {
   [key: string]: {
     title: string;
-    icon: IconProp;
+    icon: IconName;
     subcategories: string[];
   };
 }
