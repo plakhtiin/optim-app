@@ -147,6 +147,28 @@
       "element",
       "app",
       "kebab-case"
-    ]
+    ],
+    "ordered-imports": [
+      true,
+      {
+        "grouped-imports": true,
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-last",
+        "groups": [
+          {
+            "name": "Custom and relative imports",
+            "match": "^@(app|env|testing|shared)|(\\.\\.\\/)|(\\.\\/)",
+            "order": 20
+          },
+          {
+            "name": "Core & third-party imports",
+            "match": "^((?!@(app|env|testing|shared)).)*$",
+            "order": 10
+          }
+        ],
+        "module-source-path": "full"
+      }
+    ],
+    "prefer-const": true
   }
 }

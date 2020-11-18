@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { MainComponent } from './main/main.component';
-import { CategoryComponent } from './category/category.component';
+import { RouterModule, Routes } from '@angular/router';
+
 import { AboutComponent } from './about/about.component';
+import { CategoryComponent } from './category/category.component';
 import { ContactComponent } from './contact/contact.component';
+import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
@@ -15,7 +16,15 @@ const routes: Routes = [
     path: 'category',
     children: [
       {
-        path: '*',
+        path: 'individual',
+        component: CategoryComponent,
+      },
+      {
+        path: 'self-employed',
+        component: CategoryComponent,
+      },
+      {
+        path: 'company',
         component: CategoryComponent,
       },
     ]

@@ -1,1 +1,25 @@
-<p>category works!</p>
+<div class="optim-category">
+  <mat-card class="optim-category__card">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <fa-icon [icon]="['fas', categoryIcon]" size="3x" class="optim-about__icon"></fa-icon>
+      </div>
+      <mat-card-title>{{ categoryTitle }}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-header>
+      <mat-divider></mat-divider>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let category of subcategories">
+          <span mat-list-icon>
+            <fa-icon [icon]="['fas', 'dot-circle']" size="1x"></fa-icon>
+          </span>
+          <div mat-line>{{category}}</div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,3 +1,37 @@
 .optim-main {
+  display: flex;
+  padding: 50px 0 0 0;
 
+  &__card {
+    margin: 30px auto 0 auto;
+
+    .mat-card-content {
+      display: inline-grid;
+      row-gap: 20px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .mat-primary {
+      padding: 20px;
+    }
+  }
+
+  &__icon {
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    width: 3.5em;
+    height: 3.5em;
+    padding: 0.5em;
+    align-items: center;
+    text-align: center;
+    line-height: 5em;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  &__category-title {
+    font-size: 2em;
+    display: block;
+  }
 }

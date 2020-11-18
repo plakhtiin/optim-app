@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+@import "../../styles/variables";
+
+.optim-category {
+  display: flex;
+  padding: 50px 0 0 0;
+
+  &__card {
+    margin: 30px auto 0 auto;
+
+    .mat-card-header {
+      align-items: center;
+      color: mat-color($primary);
+
+      .mat-card-title {
+        margin: 0;
+      }
+
+      .mat-card-avatar {
+        width: 3em;
+        text-align: center;
+      }
+
+      .mat-divider {
+        margin-top: 25px;
+      }
+    }
+  }
+}

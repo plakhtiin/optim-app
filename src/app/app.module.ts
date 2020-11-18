@@ -1,41 +1,46 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 import { MatRadioModule } from '@angular/material/radio';
-import {
-  IconDefinition,
-  faPhoneAlt,
-  faMailBulk,
-  faPhoneSquareAlt,
-  faMapMarkedAlt,
-  faAward,
-  faUserTie,
-  faReceipt,
-  faFileInvoice,
-  faEnvelopeOpenText,
-  faFileAlt,
-} from '@fortawesome/free-solid-svg-icons';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import {
   faEnvelope,
 } from '@fortawesome/free-regular-svg-icons';
-import { MainComponent } from './main/main.component';
-import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
-import { CategoryComponent } from './category/category.component';
+import {
+  IconDefinition,
+  faAward,
+  faEnvelopeOpenText,
+  faFileAlt,
+  faFileInvoice,
+  faMailBulk,
+  faMapMarkedAlt,
+  faPhoneAlt,
+  faPhoneSquareAlt,
+  faPortrait,
+  faReceipt,
+  faUserFriends,
+  faUserTie,
+  faWallet,
+  faDotCircle,
+} from '@fortawesome/free-solid-svg-icons';
+
 import { AboutComponent } from './about/about.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { CategoryComponent } from './category/category.component';
 import { ContactComponent } from './contact/contact.component';
+import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { MatCardModule } from '@angular/material/card';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { CommonModule } from '@angular/common';
 
 const icons: IconDefinition[] = [
   faPhoneAlt,
@@ -50,6 +55,10 @@ const icons: IconDefinition[] = [
   faFileInvoice,
   faEnvelopeOpenText,
   faFileAlt,
+  faWallet,
+  faPortrait,
+  faUserFriends,
+  faDotCircle,
 ];
 const materialModules = [
   MatToolbarModule,
@@ -59,6 +68,7 @@ const materialModules = [
   MatFormFieldModule,
   MatInputModule,
   MatRadioModule,
+  MatListModule,
 ];
 
 @NgModule({

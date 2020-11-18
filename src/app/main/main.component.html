@@ -1,3 +1,30 @@
 <div class="optim-main">
-
+  <mat-card class="optim-main__card">
+    <mat-card-content>
+      <button mat-raised-button color="primary" [routerLink]="['category', 'individual']">
+        <span class="optim-main__icon">
+          <fa-icon [icon]="['fas', 'wallet']" size="3x"></fa-icon>
+        </span>
+        <span class="optim-main__category-title">
+          Физическое лицо
+        </span>
+      </button>
+      <button mat-raised-button color="primary" [routerLink]="['category', 'self-employed']">
+        <span class="optim-main__icon">
+          <fa-icon [icon]="['fas', 'portrait']" size="3x"></fa-icon>
+        </span>
+        <span class="optim-main__category-title">
+          Частный предприниматель
+        </span>
+      </button>
+      <button mat-raised-button color="primary" [routerLink]="['category', 'company']">
+        <span class="optim-main__icon">
+          <fa-icon [icon]="['fas', 'user-friends']" size="3x"></fa-icon>
+        </span>
+        <span class="optim-main__category-title">
+          Компания
+        </span>
+      </button>
+    </mat-card-content>
+  </mat-card>
 </div>
