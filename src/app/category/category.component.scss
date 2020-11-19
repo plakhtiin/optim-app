@@ -8,6 +8,25 @@
   &__card {
     margin: 30px auto 0 auto;
 
+    .mat-list-base {
+      padding-top: 12px;
+    }
+
+    .mat-list-item {
+      &:hover {
+        background: $background;
+        cursor: pointer;
+      }
+
+      .mat-list-icon {
+        text-align: center;
+      }
+
+      .mat-line {
+        font-weight: bolder;
+      }
+    }
+
     .mat-card-header {
       align-items: center;
       color: mat-color($primary);

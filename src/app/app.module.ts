@@ -1,8 +1,11 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatRippleModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -14,14 +17,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import {
-  faEnvelope,
-} from '@fortawesome/free-regular-svg-icons';
-import {
   IconDefinition,
   faAward,
+  faEnvelope,
   faEnvelopeOpenText,
   faFileAlt,
   faFileInvoice,
+  faInfoCircle,
   faMailBulk,
   faMapMarkedAlt,
   faPhoneAlt,
@@ -31,7 +33,6 @@ import {
   faUserFriends,
   faUserTie,
   faWallet,
-  faDotCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { AboutComponent } from './about/about.component';
@@ -39,6 +40,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoryComponent } from './category/category.component';
 import { ContactComponent } from './contact/contact.component';
+import { FeedbackComponent } from './dialogs/feedback/feedback.component';
+import { PhoneRequestComponent } from './dialogs/phone-request/phone-request.component';
 import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -58,7 +61,7 @@ const icons: IconDefinition[] = [
   faWallet,
   faPortrait,
   faUserFriends,
-  faDotCircle,
+  faInfoCircle,
 ];
 const materialModules = [
   MatToolbarModule,
@@ -69,6 +72,8 @@ const materialModules = [
   MatInputModule,
   MatRadioModule,
   MatListModule,
+  MatDialogModule,
+  MatRippleModule,
 ];
 
 @NgModule({
@@ -78,11 +83,14 @@ const materialModules = [
     CategoryComponent,
     AboutComponent,
     ContactComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PhoneRequestComponent,
+    FeedbackComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,

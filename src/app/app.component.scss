@@ -1,13 +1,15 @@
 @import '~@angular/material/theming';
 @import "../styles/variables";
+
 .optim-header {
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-right: 0;
   color: white;
 
   &__mail {
     color: white;
   }
+
   &__phone {
     height: 100%;
     min-width: 30%;
@@ -16,9 +18,12 @@
     align-items: center;
   }
 
-  &__mail-link {
-    padding: 0 10px;
+  &__mail {
+    color: white;
+    margin-right: 1px;
   }
+
+  &__mail,
   &__phone-number-link,
   &__phone-link {
     height: 100%;
@@ -26,15 +31,22 @@
     display: flex;
     align-items: center;
     background: white;
+
     button {
       line-height: normal;
       border-radius: 0;
       border: none;
     }
   }
+
+  &__phone-link {
+    width: 100%;
+  }
+
   &__phone-number-link {
     width: 100%;
     background-color: unset;
+
     button {
       height: 100%;
       width: 100%;
@@ -188,9 +200,11 @@
       border: 1px solid grey;
     }
   }
+
   &__social-media {
 
   }
+
   &__social-media-item {
     a {
       display: grid;

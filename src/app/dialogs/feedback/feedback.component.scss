@@ -1,18 +1,25 @@
 @import '~@angular/material/theming';
-@import "../../styles/variables";
+@import "../../../styles/variables";
 
-.optim-contact {
-  padding: 40px;
-  text-align: center;
-
-  &__content {
-    column-gap: 10px;
-    display: inline-flex;
-  }
+.optim-feedback {
   &__form {
     margin: 20px auto;
     text-align: initial;
     max-width: 500px;
+
+    .mat-form-field {
+      width: 100%;
+    }
+  }
+  &__form-row {
+    width: 100%;
+    margin-top: 15px;
+
+    .mat-radio-group {
+      margin-top: 10px;
+      display: grid;
+      row-gap: 10px;
+    }
   }
 }
 .mat-card {

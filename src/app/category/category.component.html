@@ -13,9 +13,13 @@
 
     <mat-card-content>
       <mat-list>
-        <mat-list-item *ngFor="let category of subcategories">
+        <mat-list-item
+            *ngFor="let category of subcategories"
+            matRipple
+            (click)="openDialog(category)"
+        >
           <span mat-list-icon>
-            <fa-icon [icon]="['fas', 'dot-circle']" size="1x"></fa-icon>
+            <fa-icon [icon]="['fas', 'info-circle']" size="xs"></fa-icon>
           </span>
           <div mat-line>{{category}}</div>
         </mat-list-item>

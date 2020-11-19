@@ -1,0 +1,23 @@
+<mat-dialog-content class="mat-typography">
+  <h2>
+    <a href="tel:+972 77-527-9557">
+      <fa-icon [icon]="['fas', 'phone-alt']" size="sm"></fa-icon>
+      Позвоните нам
+    </a>
+  </h2>
+  <h2>Или оставьте заявку и мы Вам перезвоним</h2>
+  <mat-form-field class="full-width">
+    <mat-label>Номер телефона</mat-label>
+    <input type="text" matInput
+           autofocus="false"
+           [formControl]="phoneFormControl"
+    >
+    <mat-error *ngIf="phoneFormControl.hasError('pattern') && phoneFormControl.value">
+      Пожалуйста, введите действующий телефонный номер
+    </mat-error>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close>Отмена</button>
+  <button mat-raised-button color="primary" (click)="sendPhoneRequest()">Отправить</button>
+</mat-dialog-actions>
