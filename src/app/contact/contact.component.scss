@@ -9,19 +9,19 @@
     column-gap: 10px;
     display: inline-flex;
   }
+
   &__form {
     margin: 20px auto;
     text-align: initial;
     max-width: 500px;
   }
 }
-.mat-card {
-  .mat-card-header {
-    align-items: center;
-    color: mat-color($primary);
 
-    .mat-card-title {
-      margin: 0;
-    }
+.mat-card-header {
+  align-items: center;
+  color: mat-color($primary);
+
+  .mat-card-title {
+    margin: 0;
   }
 }
