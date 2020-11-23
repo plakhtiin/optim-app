@@ -1,5 +1,6 @@
 @import '~@angular/material/theming';
 @import "../../styles/variables";
+@import "../../styles/media_queries_mixins";
 
 .optim-contact {
   padding: 40px;
@@ -23,5 +24,17 @@
 
   .mat-card-title {
     margin: 0;
+  }
+}
+
+/* Media queries */
+@include media-breakpoint-down(sm) {
+  .optim-contact {
+    padding: 20px;
+
+    &__content {
+      display: grid;
+      row-gap: 20px;
+    }
   }
 }

@@ -3,12 +3,14 @@
 
 .optim-feedback {
   &__form {
-    margin: 20px auto;
     text-align: initial;
     max-width: 500px;
 
     .mat-form-field {
       width: 100%;
+    }
+    .mat-card-actions {
+      margin: auto;
     }
   }
 

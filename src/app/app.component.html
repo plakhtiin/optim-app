@@ -11,7 +11,7 @@
         <fa-icon [icon]="['fas', 'phone-alt']" size="2x"></fa-icon>
       </button>
     </div>
-    <div class="optim-header__phone-number-link">
+    <div class="optim-header__phone-number-link" *ngIf="!isMobile">
       <button mat-flat-button color="warn">
         +972 77-527-9557
       </button>
@@ -24,17 +24,37 @@
       <img src="assets/logo.svg" alt="Optim">
       <span class="optim-menu__logo-text">Optim</span>
     </div>
-    <div class="optim-menu__list">
-      <span class="optim-menu__item" routerLink="about">
-        О нас
-      </span>
-      <span class="optim-menu__item" routerLink="/">
-        Услуги
-      </span>
-      <span class="optim-menu__item" routerLink="contact">
-        Контакты
-      </span>
+    <div *ngIf="isMobile || isTablet; else nonMobile" class="optim-menu__list-xs">
+      <button mat-button color="primary" [matMenuTriggerFor]="menu">
+        <fa-icon [icon]="['fas', 'bars']" size="2x"></fa-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <div mat-menu-item class="optim-menu__item-xs" routerLink="about" routerLinkActive="active">
+          О нас
+        </div>
+        <mat-divider></mat-divider>
+        <div mat-menu-item class="optim-menu__item-xs" [routerLinkActiveOptions]="{ exact: true }" routerLink="/" routerLinkActive="active">
+          Услуги
+        </div>
+        <mat-divider></mat-divider>
+        <div mat-menu-item class="optim-menu__item-xs" routerLink="contact" routerLinkActive="active">
+          Контакты
+        </div>
+      </mat-menu>
     </div>
+    <ng-template #nonMobile>
+      <div class="optim-menu__list">
+        <span class="optim-menu__item" routerLink="about" routerLinkActive="active">
+          О нас
+        </span>
+          <span class="optim-menu__item" routerLink="" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
+          Услуги
+        </span>
+          <span class="optim-menu__item" routerLink="contact" routerLinkActive="active">
+          Контакты
+        </span>
+      </div>
+    </ng-template>
   </div>
 </mat-toolbar>
 

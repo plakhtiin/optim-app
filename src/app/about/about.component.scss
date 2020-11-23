@@ -1,5 +1,6 @@
 @import '~@angular/material/theming';
 @import "../../styles/variables";
+@import "../../styles/media_queries_mixins";
 
 .optim-about {
   padding: 40px;
@@ -61,4 +62,20 @@
 }
 .mat-card-content {
   padding-top: 10px;
+}
+
+
+/* Media queries */
+@include media-breakpoint-down(sm) {
+  .optim-about {
+    min-width: unset;
+    padding: unset;
+
+    &__content {
+      grid-template-columns: auto;
+      grid-column-gap: unset;
+      grid-template-rows: auto;
+      row-gap: 20px;
+    }
+  }
 }

@@ -190,3 +190,13 @@ $altTheme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
 
 $primary: map-get($theme, primary);
 $warn: map-get($theme, warn);
+
+$breakpoints: (
+    xs: 320px,
+    s: 375px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    l: 1024px,
+    xl: 1200px
+);

@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MAT_MENU_CONTENT, MatMenuModule, MAT_MENU_PANEL, MAT_MENU_DEFAULT_OPTIONS } from '@angular/material/menu';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,6 +20,7 @@ import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import {
   IconDefinition,
   faAward,
+  faBars,
   faEnvelope,
   faEnvelopeOpenText,
   faFileAlt,
@@ -62,6 +64,7 @@ const icons: IconDefinition[] = [
   faPortrait,
   faUserFriends,
   faInfoCircle,
+  faBars,
 ];
 const materialModules = [
   MatToolbarModule,
@@ -74,6 +77,7 @@ const materialModules = [
   MatListModule,
   MatDialogModule,
   MatRippleModule,
+  MatMenuModule,
 ];
 
 @NgModule({
@@ -98,7 +102,12 @@ const materialModules = [
     ReactiveFormsModule,
     ...materialModules,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: MAT_MENU_DEFAULT_OPTIONS,
+      useValue: { overlayPanelClass: 'optim-menu-xs' }
+    }
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {

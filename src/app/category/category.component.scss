@@ -1,5 +1,6 @@
 @import '~@angular/material/theming';
 @import "../../styles/variables";
+@import "../../styles/media_queries_mixins";
 
 .optim-category {
   display: flex;
@@ -21,10 +22,6 @@
       .mat-list-icon {
         text-align: center;
       }
-
-      .mat-line {
-        font-weight: bolder;
-      }
     }
 
     .mat-card-header {
@@ -44,5 +41,16 @@
         margin-top: 25px;
       }
     }
+  }
+
+  &__item {
+    font-weight: bolder;
+  }
+}
+
+@include media-breakpoint-down(s) {
+  .optim-category {
+    display: block;
+    padding: 20px;
   }
 }

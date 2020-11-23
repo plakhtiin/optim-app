@@ -13,3 +13,13 @@ body {
 * {
   outline: none;
 }
+
+.optim-menu-xs {
+  width: 100%;
+}
+
+.mat-menu-panel {
+  width: 100%;
+  max-width: unset !important;
+  margin-top: 40px;
+}
