@@ -1,3 +1,6 @@
+@import "../../styles/variables";
+@import "../../styles/media_queries_mixins";
+
 .optim-main {
   display: flex;
   padding: 50px 0 0 0;
@@ -33,5 +36,30 @@
   &__category-title {
     font-size: 2em;
     display: block;
+    white-space: normal;
+  }
+}
+
+
+/* Media queries */
+@include media-breakpoint-down(sm) {
+  .optim-main {
+    &__category-title {
+      font-size: 1.5em;
+    }
+    &__card {
+      .mat-card-content {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .optim-main {
+    padding: 10px 0;
+    &__card {
+      margin: 10px auto;
+    }
   }
 }
