@@ -100,10 +100,20 @@
     cursor: pointer;
   }
 
-  &__logo-text {
+  &__logo-block {
+    display: grid;
+    row-gap: 20px;
+    text-align: center;
     padding-left: 5px;
+  }
+
+  &__logo-text {
     font-size: 60px;
     font-weight: lighter;
+  }
+
+  &__logo-text-sm {
+    font-size: 30px;
   }
 
   &__list {
@@ -258,8 +268,22 @@
   .optim-header__phone {
     min-width: unset;
   }
-  .optim-menu__info {
-    padding: 0;
+  .optim-menu {
+    &__logo-block {
+      row-gap: 10px;
+    }
+
+    &__logo-text {
+      font-size: 50px;
+    }
+
+    &__logo-text-sm {
+      font-size: 25px;
+    }
+
+    &__info {
+      padding: 0;
+    }
   }
   .optim-footer {
     &__abstract-figure {
@@ -314,13 +338,23 @@
 @include media-breakpoint-down(xs) {
   .optim-menu {
     padding: 0 7px;
+
     &__info {
       img {
         max-height: 75px;
       }
     }
+
     &__logo-text {
       font-size: 40px;
+    }
+
+    &__logo-block {
+      row-gap: 5px;
+    }
+
+    &__logo-text-sm {
+      font-size: 20px;
     }
   }
   .optim-footer {

@@ -28,6 +28,11 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
   }
+
+  &__content-mission {
+    margin-top: 20px;
+  }
+
   &__content-block {
     background: white;
     padding: 15px;
@@ -39,8 +44,10 @@
       justify-self: end;
     }
   }
+
   &__company-motto {
     margin: 40px auto;
+
     .mat-card-content {
       font-size: x-large;
       text-align: center;
@@ -48,10 +55,12 @@
       padding-top: 0;
     }
   }
+
   &__warn {
     color: mat-color($warn);
   }
 }
+
 .mat-card-header {
   align-items: center;
 
@@ -60,6 +69,7 @@
     color: mat-color($primary);
   }
 }
+
 .mat-card-content {
   padding-top: 10px;
 }

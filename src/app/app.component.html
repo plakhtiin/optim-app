@@ -22,7 +22,10 @@
   <div class="optim-menu__info">
     <div class="optim-menu__logo" routerLink="/">
       <img src="assets/logo.svg" alt="Optim">
-      <span class="optim-menu__logo-text">Optim</span>
+      <div class="optim-menu__logo-block">
+        <div class="optim-menu__logo-text">Optim</div>
+        <div class="optim-menu__logo-text-sm">Family Office</div>
+      </div>
     </div>
     <div *ngIf="isMobile || isTablet; else nonMobile" class="optim-menu__list-xs">
       <button mat-button color="primary" [matMenuTriggerFor]="menu">
@@ -61,7 +64,9 @@
 <!--Content area-->
 <div class="optim-content">
   <div class="optim-content__header">
-    <h1>Пенсии, страхование, бухгалтерия, инвестиции, кредитование, налоги, юридические консультации</h1>
+    <h1>
+      оптимизация финансовых решений для частных лиц, предпринимателей и компаний
+    </h1>
   </div>
 </div>
 <router-outlet></router-outlet>
@@ -77,10 +82,9 @@
     </div>
     <div class="optim-footer__schedule">
       <dt>График работы:</dt>
-      <dt>Пн 9:00-20:00</dt>
-      <dt>Вт-Пт 9:00-17:00</dt>
+      <dt>Вс-Чт 9:00-20:00</dt>
+      <dt>Пт 9:00-13:00</dt>
       <dt>Сб - Выходной</dt>
-      <dt>Вс 9:00-17:00</dt>
     </div>
     <div class="optim-footer__social-media">
       <div class="optim-footer__social-media-item">
@@ -98,7 +102,7 @@
       <div class="optim-footer__social-media-item">
         <a href="https://www.google.com/maps/place/Netanya,+Israel" target="_blank">
           <fa-icon [icon]="['fas', 'map-marked-alt']" size="2x"></fa-icon>
-          <span>Нетания, Израиль</span>
+          <span>Израиль</span>
         </a>
       </div>
       <div class="optim-footer__social-media-item">
