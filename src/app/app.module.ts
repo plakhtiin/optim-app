@@ -10,7 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
-import { MAT_MENU_CONTENT, MatMenuModule, MAT_MENU_PANEL, MAT_MENU_DEFAULT_OPTIONS } from '@angular/material/menu';
+import { MAT_MENU_DEFAULT_OPTIONS, MatMenuModule } from '@angular/material/menu';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,6 +21,7 @@ import {
   IconDefinition,
   faAward,
   faBars,
+  faChartLine,
   faEnvelope,
   faEnvelopeOpenText,
   faFileAlt,
@@ -65,6 +66,7 @@ const icons: IconDefinition[] = [
   faUserFriends,
   faInfoCircle,
   faBars,
+  faChartLine,
 ];
 const materialModules = [
   MatToolbarModule,

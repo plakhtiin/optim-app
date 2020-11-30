@@ -74,6 +74,9 @@
   padding-top: 10px;
 }
 
+strong {
+  color: mat-color($primary);
+}
 
 /* Media queries */
 @include media-breakpoint-down(sm) {

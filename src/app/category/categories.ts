@@ -10,7 +10,7 @@ export interface Category {
 
 export const CATEGORIES: Category = {
   individual: {
-    title: 'Физическое лицо',
+    title: 'Частное лицо',
     icon: 'wallet',
     subcategories: [
       'Пенсия',
@@ -25,7 +25,7 @@ export const CATEGORIES: Category = {
     ],
   },
   'self-employed': {
-    title: 'Частный предприниматель',
+    title: 'Предприниматель',
     icon: 'portrait',
     subcategories: [
       'Пенсия',
