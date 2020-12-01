@@ -254,6 +254,11 @@
   }
 }
 
+.optim-licence {
+  font-size: 8px;
+  opacity: 0.3;
+  line-height: normal;
+}
 /* Media queries */
 
 @include media-breakpoint-down(md) {
@@ -311,6 +316,7 @@
     &__header {
       h1 {
         min-width: unset;
+        width: 100%;
       }
     }
   }

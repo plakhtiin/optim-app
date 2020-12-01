@@ -1,9 +1,7 @@
-import { IconName } from '@fortawesome/fontawesome-svg-core';
-
 export interface Category {
   [key: string]: {
     title: string;
-    icon: IconName;
+    icon: string;
     subcategories: string[];
   };
 }
@@ -11,7 +9,7 @@ export interface Category {
 export const CATEGORIES: Category = {
   individual: {
     title: 'Частное лицо',
-    icon: 'wallet',
+    icon: 'personal.svg',
     subcategories: [
       'Пенсия',
       'Выход на пенсию',
@@ -26,7 +24,7 @@ export const CATEGORIES: Category = {
   },
   'self-employed': {
     title: 'Предприниматель',
-    icon: 'portrait',
+    icon: 'credit-card.svg',
     subcategories: [
       'Пенсия',
       'Профессиональная страховка',
@@ -36,7 +34,7 @@ export const CATEGORIES: Category = {
   },
   company: {
     title: 'Компания',
-    icon: 'user-friends',
+    icon: 'organization.svg',
     subcategories: [
       'Пенсии для сотрудников',
       'Страхование профессиональное и помещения',

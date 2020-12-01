@@ -64,3 +64,9 @@ a {
   text-decoration: none;
   color: unset;
 }
+
+.mat-card-avatar {
+  min-height: 50px !important;
+  min-width: 50px !important;
+  border-radius: unset !important;
+}

@@ -1,9 +1,7 @@
 <div class="optim-category">
   <mat-card class="optim-category__card">
     <mat-card-header>
-      <div mat-card-avatar>
-        <fa-icon [icon]="['fas', categoryIcon]" size="3x" class="optim-about__icon"></fa-icon>
-      </div>
+      <img mat-card-avatar [src]="'assets/' + categoryIcon" [attr.alt]="categoryTitle">
       <mat-card-title>{{ categoryTitle }}</mat-card-title>
     </mat-card-header>
 

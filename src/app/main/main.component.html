@@ -1,28 +1,16 @@
 <div class="optim-main">
   <mat-card class="optim-main__card">
     <mat-card-content>
-      <button mat-raised-button color="primary" [routerLink]="['category', 'individual']">
+      <button mat-raised-button
+              color="primary"
+              *ngFor="let category of categories"
+              [routerLink]="category.link"
+      >
         <span class="optim-main__icon">
-          <fa-icon [icon]="['fas', 'wallet']" size="3x"></fa-icon>
+          <img [src]="'assets/' + category.icon" [attr.alt]="category.title">
         </span>
         <span class="optim-main__category-title">
-          Частное лицо
-        </span>
-      </button>
-      <button mat-raised-button color="primary" [routerLink]="['category', 'self-employed']">
-        <span class="optim-main__icon">
-          <fa-icon [icon]="['fas', 'portrait']" size="3x"></fa-icon>
-        </span>
-        <span class="optim-main__category-title">
-          Предприниматель
-        </span>
-      </button>
-      <button mat-raised-button color="primary" [routerLink]="['category', 'company']">
-        <span class="optim-main__icon">
-          <fa-icon [icon]="['fas', 'user-friends']" size="3x"></fa-icon>
-        </span>
-        <span class="optim-main__category-title">
-          Компания
+          {{ category.title }}
         </span>
       </button>
     </mat-card-content>

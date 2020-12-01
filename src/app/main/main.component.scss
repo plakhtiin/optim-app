@@ -24,13 +24,17 @@
     border: 2px solid white;
     border-radius: 50%;
     display: inline-block;
-    width: 3.5em;
-    height: 3.5em;
-    padding: 0.5em;
+    width: 4em;
+    height: 4em;
+    padding: 0.6em;
     align-items: center;
     text-align: center;
     line-height: 5em;
-    background: rgba(255, 255, 255, 0.3);
+    //background: rgba(255, 255, 255, 0.3);
+
+    img {
+      height: inherit;
+    }
   }
 
   &__category-title {

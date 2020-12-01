@@ -5,9 +5,17 @@
   .mat-list-item-content {
     padding: 0 5px !important;
   }
+  .mat-card-avatar {
+    height: 60px !important;
+    width: 60px !important;
+  }
 }
 @include media-breakpoint-down(xs) {
   .mat-menu-panel {
     margin-top: 18px !important;
+  }
+  .mat-card-avatar {
+    height: 40px !important;
+    width: 40px !important;
   }
 }

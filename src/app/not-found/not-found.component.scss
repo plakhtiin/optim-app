@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+@import "../../styles/media_queries_mixins";
+
+.optim-404 {
+  padding: 20px;
+  text-align: center;
+
+  &__block {
+    width: 80%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: mat-color($warn);
+    font-size: xx-large;
+  }
+}

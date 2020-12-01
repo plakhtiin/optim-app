@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
-import { IconName } from '@fortawesome/fontawesome-svg-core';
 
 import { PhoneRequestComponent } from '../dialogs/phone-request/phone-request.component';
 import { CATEGORIES } from './categories';
@@ -13,7 +12,7 @@ import { CATEGORIES } from './categories';
 })
 export class CategoryComponent implements OnInit {
   categoryTitle = '';
-  categoryIcon: IconName = 'dot-circle';
+  categoryIcon = '';
   subcategories: string[] = [];
 
   constructor(
