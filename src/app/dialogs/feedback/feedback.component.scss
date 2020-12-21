@@ -1,6 +1,17 @@
 @import '~@angular/material/theming';
 @import "../../../styles/variables";
 
+mat-spinner {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+
+.loading {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .optim-feedback {
   &__form {
     text-align: initial;

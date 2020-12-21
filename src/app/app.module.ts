@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MAT_MENU_DEFAULT_OPTIONS, MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
@@ -48,6 +49,9 @@ import { PhoneRequestComponent } from './dialogs/phone-request/phone-request.com
 import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+import { AmplifyAngularModule } from 'aws-amplify-angular';
+import { AmplifyService }  from 'aws-amplify-angular';
+
 const icons: IconDefinition[] = [
   faPhoneAlt,
   faEnvelope,
@@ -80,6 +84,7 @@ const materialModules = [
   MatDialogModule,
   MatRippleModule,
   MatMenuModule,
+  MatProgressSpinnerModule,
 ];
 
 @NgModule({
@@ -103,8 +108,10 @@ const materialModules = [
     FormsModule,
     ReactiveFormsModule,
     ...materialModules,
+    AmplifyAngularModule,
   ],
   providers: [
+    AmplifyService,
     {
       provide: MAT_MENU_DEFAULT_OPTIONS,
       useValue: { overlayPanelClass: 'optim-menu-xs' }

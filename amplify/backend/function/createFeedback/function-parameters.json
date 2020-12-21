@@ -1,0 +1,9 @@
+{
+  "lambdaLayers": [
+    {
+      "type": "ExternalLayer",
+      "arn": "arn:aws:lambda:us-east-2:402679988063:layer:sendMail-main:5"
+    }
+  ],
+  "permissions": {}
+}

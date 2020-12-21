@@ -18,28 +18,34 @@ export const PHONE_PATTERN = '^((\\+972-?\\s*)|0\\s*)?(\\d\\s*-?){8}\\d$';
 @Component({
   selector: 'app-phone-request',
   templateUrl: './phone-request.component.html',
-  styleUrls: ['./phone-request.component.scss']
+  styleUrls: [ './phone-request.component.scss' ],
 })
 export class PhoneRequestComponent implements OnInit {
-  phoneFormControl: FormControl = new FormControl('', [Validators.pattern(PHONE_PATTERN)]);
+  isLoad = false;
+  phoneFormControl: FormControl = new FormControl('', [ Validators.pattern(PHONE_PATTERN) ]);
 
   constructor(
     private apiService: ApiService,
     public dialogRef: MatDialogRef<PhoneRequestComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) { }
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+  ) {
+  }
 
   ngOnInit(): void {
   }
 
   sendPhoneRequest(): void {
+    this.phoneFormControl.markAllAsTouched();
     if (this.phoneFormControl.value && this.phoneFormControl.valid) {
+      this.isLoad = true;
       this.apiService.sendPhoneRequest({
         phone: this.phoneFormControl.value,
         category: this.data.category,
-      }).subscribe(_ => {
-        this.dialogRef.close();
-      });
+      })
+        .then(_ => {
+          this.dialogRef.close();
+        })
+        .finally(() => this.isLoad = false);
     }
   }
 

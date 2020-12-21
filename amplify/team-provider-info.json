@@ -1,0 +1,55 @@
+{
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-optim-api-main-193326-authRole",
+      "UnauthRoleArn": "arn:aws:iam::402679988063:role/amplify-optim-api-main-193326-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::402679988063:role/amplify-optim-api-main-193326-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-optim-api-main-193326-deployment",
+      "UnauthRoleName": "amplify-optim-api-main-193326-unauthRole",
+      "StackName": "amplify-optim-api-main-193326",
+      "StackId": "arn:aws:cloudformation:us-east-2:402679988063:stack/amplify-optim-api-main-193326/ea187d70-37f9-11eb-8e1b-0217d39b5ac0",
+      "AmplifyAppId": "d1w92xp4gyzi3b"
+    },
+    "nonCFNdata": {
+      "function": {
+        "sendMail": {
+          "layerVersionMap": {
+            "1": {
+              "permissions": [
+                {
+                  "type": "private"
+                }
+              ],
+              "hash": "t/iHRINYZqzxR4dfcLHGN/xCcjetd65myBEdVVlX6+I="
+            }
+          }
+        }
+      }
+    },
+    "categories": {
+      "function": {
+        "sendMail": {
+          "deploymentBucketName": "amplify-optim-api-main-193326-deployment",
+          "s3Key": "amplify-builds/sendMail-build.zip"
+        }
+      },
+      "auth": {
+        "cognito08ea26c1": {}
+      }
+    }
+  },
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify94d1a99e76514-staging-134627-authRole",
+      "UnauthRoleArn": "arn:aws:iam::402679988063:role/amplify-amplify94d1a99e76514-staging-134627-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::402679988063:role/amplify-amplify94d1a99e76514-staging-134627-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-amplify94d1a99e76514-staging-134627-deployment",
+      "UnauthRoleName": "amplify-amplify94d1a99e76514-staging-134627-unauthRole",
+      "StackName": "amplify-amplify94d1a99e76514-staging-134627",
+      "StackId": "arn:aws:cloudformation:us-east-2:402679988063:stack/amplify-amplify94d1a99e76514-staging-134627/c73d5b20-34a4-11eb-b0d4-02a683f07af6",
+      "AmplifyAppId": "d1w92xp4gyzi3b"
+    }
+  }
+}

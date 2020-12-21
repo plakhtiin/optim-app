@@ -1,0 +1,21 @@
+{
+    "appName": "optim",
+    "roleName": "pinpointLambdaRole32ae38a4",
+    "cloudformationPolicyName": "cloudformationPolicy32ae38a4",
+    "cloudWatchPolicyName": "cloudWatchPolicy32ae38a4",
+    "pinpointPolicyName": "pinpointPolicy32ae38a4",
+    "authPolicyName": "pinpoint_amplify_32ae38a4",
+    "unauthPolicyName": "pinpoint_amplify_32ae38a4",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

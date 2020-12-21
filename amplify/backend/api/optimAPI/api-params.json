@@ -1,0 +1,54 @@
+{
+  "paths": [
+    {
+      "name": "/api/feedback",
+      "lambdaFunction": "createFeedback",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/api/feedback"
+    },
+    {
+      "name": "/api/phone",
+      "lambdaFunction": "createPhoneRequest",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/api/phone"
+    }
+  ],
+  "resourceName": "optimAPI",
+  "apiName": "optimAPI",
+  "functionArns": [
+    {
+      "lambdaFunction": "createFeedback"
+    },
+    {
+      "lambdaFunction": "createPhoneRequest"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-amplify94d1a99e76514-staging-134627-authRole",
+    "unAuthRoleName": "amplify-amplify94d1a99e76514-staging-134627-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "createFeedback",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    },
+    {
+      "category": "function",
+      "resourceName": "createPhoneRequest",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

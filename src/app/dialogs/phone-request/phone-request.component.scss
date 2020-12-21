@@ -1,3 +1,14 @@
 .full-width {
   width: 100%;
 }
+
+mat-spinner {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+
+.loading {
+  pointer-events: none;
+  opacity: 0.5;
+}

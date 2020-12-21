@@ -4,6 +4,9 @@ import { ActivatedRoute } from '@angular/router';
 
 import { PhoneRequestComponent } from '../dialogs/phone-request/phone-request.component';
 import { CATEGORIES } from './categories';
+import Analytics from '@aws-amplify/analytics';
+import { environment } from '../../environments/environment';
+
 
 @Component({
   selector: 'app-category',
@@ -24,6 +27,14 @@ export class CategoryComponent implements OnInit {
   ngOnInit(): void {
     const category: string = this.activatedRoute.snapshot.routeConfig?.path || '';
     if (category) {
+      if (environment.production) {
+        Analytics.record({
+          name: 'visitCategory',
+          attributes: {
+            category: category
+          }
+        });
+      }
       this.categoryTitle = CATEGORIES[category].title;
       this.categoryIcon = CATEGORIES[category].icon;
       this.subcategories = CATEGORIES[category].subcategories;

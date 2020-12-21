@@ -1,4 +1,5 @@
-<div class="optim-feedback__form">
+<div class="optim-feedback__form" [class.loading]="isLoad">
+  <mat-spinner *ngIf="isLoad" diameter="40"></mat-spinner>
   <mat-card-header>
     <div mat-card-avatar>
       <fa-icon [icon]="['fas', 'file-alt']" size="3x" class="optim-feedback__icon"></fa-icon>

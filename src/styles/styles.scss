@@ -7,7 +7,7 @@ html, body {
 body {
   background-color: $background;
   margin: 0;
-  font-family: Manrope, "Helvetica Neue", sans-serif;
+  font-family: Manrope, Rubik, "Helvetica Neue", sans-serif;
 }
 
 * {
@@ -22,4 +22,8 @@ body {
   width: 100%;
   max-width: unset !important;
   margin-top: 30px;
+}
+
+.mat-input-element {
+  line-height: normal !important;
 }

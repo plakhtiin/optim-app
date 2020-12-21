@@ -1,0 +1,21 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>https://DOMAIN_NAME/</loc>
+    </url>
+    <url>
+        <loc>https://DOMAIN_NAME/category/company</loc>
+    </url>
+    <url>
+        <loc>https://DOMAIN_NAME/category/self-employed</loc>
+    </url>
+    <url>
+        <loc>https://DOMAIN_NAME/category/individual</loc>
+    </url>
+    <url>
+        <loc>https://DOMAIN_NAME/about</loc>
+    </url>
+    <url>
+        <loc>https://DOMAIN_NAME/contact</loc>
+    </url>
+</urlset>
